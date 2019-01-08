@@ -3,6 +3,6 @@ A facial recognition system that can serve as a general purpose entry way for id
 
 Inspired by and partly ported from:
 
-Donny-Hikari/FaceLock
+  Donny-Hikari/FaceLock
 
-Hironsan/BossSensor
+  Hironsan/BossSensor
