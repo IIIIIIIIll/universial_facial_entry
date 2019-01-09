@@ -3,7 +3,7 @@ A facial recognition system that can serve as a general purpose entry way for id
 
 # Requirements 
 - `keras` with backend as your choice (tf in my case)
-- A uvcvideo device or any video supported by OpenCV
+- A uvcvideo device or any video inputs supported by OpenCV
 - `OpenCV` python (3.4.5), numpy, etc.
 - Public face library (I used ORL)
 - Ability to read and understand this easy code :）
