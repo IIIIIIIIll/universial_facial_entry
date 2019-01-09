@@ -40,42 +40,6 @@ def image_in(path):
     return image
 
 
-IMAGE_SIZE = 64
-BLACK = [0, 0, 0]
-
-
-def standardize(image, height=IMAGE_SIZE, width=IMAGE_SIZE):
-    def padding(image):
-        h, w = image.shape
-        long_edge = max(h, w)
-        t, b, l, r = (0, 0, 0, 0)
-        if h < long_edge:
-            temp = long_edge - h
-            t = temp // 2
-            b = temp // 2
-        elif w < long_edge:
-            temp = long_edge - w
-            l = temp // 2
-            r = temp // 2
-        else:
-            pass
-        return t, b, l, r
-
-    top, bottom, left, right = padding(image)
-    constant = cv2.copyMakeBorder(image, top, bottom, left, right, cv2.BORDER_CONSTANT, value=BLACK)
-
-    resized_image = cv2.resize(constant, (height, width))
-
-    return resized_image
-
-
-def image_in(path):
-    image = cv2.imread(path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    image = standardize(image, IMAGE_SIZE, IMAGE_SIZE)
-    return image
-
-
 images = []
 labels = []
 
