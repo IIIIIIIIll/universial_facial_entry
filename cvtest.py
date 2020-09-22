@@ -10,7 +10,7 @@ model.load()
 blue = (102,255,255)
 count = 0
 CropPadding = 50
-dir_path = "/home/yut/ML_CV/keras_learn/Webcam/target"
+dir_path = "/target"
 
 def extendFaceRect(rect):
     [x, y, w, h] = rect
